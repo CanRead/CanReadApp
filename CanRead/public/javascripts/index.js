@@ -24,6 +24,9 @@ $("#login").on('click', function(e){
   url: '/secret',
   sif_token: sif_token
   });
+    $("#loginPage").hide();
+    $("#spritzPage").show();
+
 
   }
 });
