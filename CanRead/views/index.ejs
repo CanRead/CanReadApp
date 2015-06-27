@@ -36,17 +36,27 @@
   <div>
       <textarea id="inputText" rows="12" cols="70">Spritzing content from the web is also easy. All you need to do is publish content on the web, and our platform can transform it into Spritz Text. The default configuration simply extracts all text from the HTML at the target URL, but advanced configuration allows finer control using CSS-like selectors.</textarea>
       <p class="muted">
-        <small>Paste your own text into the field above or click the <b>Fill</b> button to load the sample text, and then click the <b>Spritz!</b> button to start spritzing.</small><br>
+      Click the <b>Spritz!</b> button to start spritzing.<br>
         <small>To remove the text from the field, click the <b>Clear</b> button.</small>
       </p>
-      <button class="btn btn-default" id="fill" type="submit">Fill</button>
+      <!-- <button class="btn btn-default" id="fill" type="submit">Fill</button> -->
       <button class="btn btn-default" id="clear" type="submit">Clear</button>   
       <button class="btn btn-primary" id="startSpritz" type="submit">Spritz!</button>
   </div>
 </div>
-
-<script type="text/javascript" src="http://sdk.spritzinc.com/js/1.2/js/spritz.min.js"></script>
+  <script type="text/javascript">
+    var SpritzSettings = {
+      clientId: "6c5714e3604dad3f5",
+      redirectUri: "login_success.html",
+      
+    };
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://sdk.spritzinc.com/js/1.2/js/spritz.min.js"></script>
   <script id="js-example-script" type="text/javascript" src="javascripts/testApp7.js"></script>
+<!-- this example's JS -->
+
+
 <script src="/javascripts/index.js"></script>
 </body>
 </html>

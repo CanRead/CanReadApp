@@ -13,13 +13,13 @@
         $("#inputText").val("");
     }
     
-    function fillTextClick() {
-    	var testText = "Spritzing content from the web is also easy. All you need to do is publish content on the web, "
-    		+ " and our platform can transform it into Spritz Text. The default configuration simply extracts all text " 
-    		+ "from the HTML at the target URL, but advanced configuration allows finer control using CSS-like selectors.";    		
-    	var text = $("#inputText").val();   	
-        $("#inputText").val(text + (text != "" ? "\n" : "") + testText);
-    }
+    // function fillTextClick() {
+    // 	var testText = "Spritzing content from the web is also easy. All you need to do is publish content on the web, "
+    // 		+ " and our platform can transform it into Spritz Text. The default configuration simply extracts all text " 
+    // 		+ "from the HTML at the target URL, but advanced configuration allows finer control using CSS-like selectors.";    		
+    // 	var text = $("#inputText").val();   	
+    //     $("#inputText").val(text + (text != "" ? "\n" : "") + testText);
+    // }
 
 	function onStartSpritzClick(event) {
 		var text = $('#inputText').val();
@@ -40,7 +40,7 @@
 	var init = function() {
 		
 		$("#clear").on("click", clearTextClick);
-		$("#fill").on("click", fillTextClick);
+		//$("#fill").on("click", fillTextClick);
 		$("#startSpritz").on("click", onStartSpritzClick);			
 		 
  		// Construct a SpritzController passing the customization options
