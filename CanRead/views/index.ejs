@@ -9,37 +9,44 @@
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   <title>Can Read</title>
+
 </head>
 <body>
 
- <h1 class='text-center'>CanRead</h1>
+<h1 class='text-center'>CanRead</h1>
 
+<div class="page">
  <form role='form'>
  	<div class='form-group'>
  		<div class='row'>
  			<div class='col-xs-3'></div>
  			<div class='col-xs-6'>
-		 		<input type="text" class='form-control' placeholder="Username">
-		 		<input type="text" class='form-control' placeholder="Password">	
-		 		<button type="submit" class='btn btn-lg btn-primary' id="loginButton">Log In</button>
-		 	</div>
-		 	
+		 		<input type="text" class='form-control' placeholder="Username" id="username">
+		 		<input type="password" class='form-control' placeholder="Password" id="password">	
+		 		<button type="submit" class='btn btn-lg btn-primary' id="login">Log In</button>
+		 	</div> 	
+	 	</div>
 	 </div>
  </form>
-
-
-<form role='form'>
- 	<div class='form-group'>
- 		<div class='row'>
- 			<div class='col-xs-3'></div>
- 			<div class='col-xs-6'>
-		 		<input type="text" class='form-control' placeholder="Find a book">	
-		 	</div>
-		 	<button type="submit" class='btn btn-lg btn-primary'>Search</button>
-	 </div>
-</form>
 </div>
-<!--Spritz Reader/detail view below -->
 
+<!--Spritz Reader/detail view below -->
+<div class="page">
+  <div id="spritzer"></div>
+  <div>
+      <textarea id="inputText" rows="12" cols="70">Spritzing content from the web is also easy. All you need to do is publish content on the web, and our platform can transform it into Spritz Text. The default configuration simply extracts all text from the HTML at the target URL, but advanced configuration allows finer control using CSS-like selectors.</textarea>
+      <p class="muted">
+        <small>Paste your own text into the field above or click the <b>Fill</b> button to load the sample text, and then click the <b>Spritz!</b> button to start spritzing.</small><br>
+        <small>To remove the text from the field, click the <b>Clear</b> button.</small>
+      </p>
+      <button class="btn btn-default" id="fill" type="submit">Fill</button>
+      <button class="btn btn-default" id="clear" type="submit">Clear</button>   
+      <button class="btn btn-primary" id="startSpritz" type="submit">Spritz!</button>
+  </div>
+</div>
+
+<script type="text/javascript" src="http://sdk.spritzinc.com/js/1.2/js/spritz.min.js"></script>
+  <script id="js-example-script" type="text/javascript" src="javascripts/testApp7.js"></script>
+<script src="/javascripts/index.js"></script>
 </body>
 </html>

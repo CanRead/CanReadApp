@@ -13,3 +13,6 @@ a {
   color: #00B7FF;
 }
 
+div.spritzer-header {
+	display: none;
+}

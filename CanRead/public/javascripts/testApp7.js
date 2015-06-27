@@ -50,7 +50,6 @@
  		spritzController.attach($("#spritzer"));
 	};
 	
-	
 	$(document).ready(function() {
 		init();
 	});
