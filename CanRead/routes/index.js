@@ -34,16 +34,12 @@ router.post('/upload_manual', function(req, res){
 
 router.post('/secret', function(req, res){
 	sif_token = req.params.sif_token; 
-	res.send('{success:true}');
+	res.send(sif_token);
 }); 
 
 router.get('/secret', function(req, res){
-	fs.writeFile('tmp/upload.txt', "hi", function(err){
-		if (err){
-			console.log(err);
-		}
-		console.log('the file is saved!');
-	});
-}); 
+	res.send(sif_token);
+})
+
 
 module.exports = router;

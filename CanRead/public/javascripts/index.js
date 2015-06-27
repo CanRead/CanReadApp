@@ -19,11 +19,18 @@ $("#login").on('click', function(e){
   success: function(response) {
   	console.log("got an access token: " + response.access_token);
     sif_token = response.access_token;
+    $.ajax({
+  method: "POST", 
+  url: '/secret',
+  sif_token: sif_token
+  });
+    $("#loginPage").hide();
+    $("#spritzPage").show();
+
 
   }
 });
 })
-
 
 
 

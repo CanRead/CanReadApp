@@ -10,12 +10,13 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   <title>Can Read</title>
 
+
 </head>
 <body>
 
 <h1 class='text-center'>CanRead</h1>
 
-<div class="page">
+<div class="page" id="loginPage">
  <form role='form'>
  	<div class='form-group'>
  		<div class='row'>
@@ -31,17 +32,19 @@
 </div>
 
 <!--Spritz Reader/detail view below -->
-<div class="page">
-  <div id="spritzer"></div>
-  <div>
-      <textarea id="inputText" rows="12" cols="70">Spritzing content from the web is also easy. All you need to do is publish content on the web, and our platform can transform it into Spritz Text. The default configuration simply extracts all text from the HTML at the target URL, but advanced configuration allows finer control using CSS-like selectors.</textarea>
-      <p class="muted">
-      Click the <b>Spritz!</b> button to start spritzing.<br>
-        <small>To remove the text from the field, click the <b>Clear</b> button.</small>
-      </p>
-      <!-- <button class="btn btn-default" id="fill" type="submit">Fill</button> -->
-      <button class="btn btn-default" id="clear" type="submit">Clear</button>   
-      <button class="btn btn-primary" id="startSpritz" type="submit">Spritz!</button>
+<div class="page" id="spritzPage">
+  <div id="sprtiz_wrapper">
+    <div id="spritzer"></div>
+    <div>
+        <textarea id="inputText" rows="12" cols="70">Spritzing content from the web is also easy. All you need to do is publish content on the web, and our platform can transform it into Spritz Text. The default configuration simply extracts all text from the HTML at the target URL, but advanced configuration allows finer control using CSS-like selectors.</textarea>
+        <p class="muted">
+        Click the <b>Spritz!</b> button to start spritzing.<br>
+          <small>To remove the text from the field, click the <b>Clear</b> button.</small>
+        </p>
+        <!-- <button class="btn btn-default" id="fill" type="submit">Fill</button> -->
+        <button class="btn btn-default" id="clear" type="submit">Clear</button>   
+        <button class="btn btn-primary" id="startSpritz" type="submit">Spritz!</button>
+        </div>
   </div>
 </div>
   <script type="text/javascript">
