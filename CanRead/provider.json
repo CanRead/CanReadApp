@@ -1,0 +1,19 @@
+{
+
+"hmh-login": {
+"provider": "hmh",
+"module": "passport-oauth2",
+"clientID": "9d98cf42-177f-45e8-b329-dded825d7172.hmhco.com",
+"clientSecret" : "AK7-QEeF0RdM",
+"callbackURL": "/sample/auth/hmh/callback",
+"authorizationURL": "http://sandbox.api.hmhco.com:8080/openid-connect/v2/authorize",
+"tokenURL": "http://sandbox.api.hmhco.com/openid-connect/v2/token",
+"authPath": "/sample/auth/hmh",
+"callbackPath": "/sample/auth/hmh/callback",
+"successRedirect": "/sample/auth/account",
+"failureRedirect": "/sample/login",
+"scope": ["openid"],
+"failureFlash": true
+}
+
+}
