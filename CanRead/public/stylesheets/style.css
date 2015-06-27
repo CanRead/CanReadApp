@@ -1,8 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+#loginButton {
+	margin: 15px auto;
+	display: block;
 }
 
 a {
   color: #00B7FF;
 }
+
