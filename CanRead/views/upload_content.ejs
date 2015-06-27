@@ -24,11 +24,9 @@
 </form>
 
 
-<form role='form' action='/upload_manual' method='POST' id='upload_manual'>
-  <div class="form-group">
-    <input type='file' name='file'>
-  </div>
-  <button type="submit" class='btn btn-lg btn-primary' id='upload'>Upload</button>
+<form id="file-form" action="handler.php" method="POST">
+  <input type="file" id="file-select" name="photos[]" multiple/>
+  <button type="submit" id="upload-button">Upload</button>
 </form>
 
 <!--Spritz Reader/detail view below -->

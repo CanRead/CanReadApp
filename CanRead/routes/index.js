@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var sif_token; 
+var apikey = "685e16af4b72e10a6cf15409ad0d979a";
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -38,7 +39,27 @@ router.post('/secret', function(req, res){
 }); 
 
 router.get('/secret', function(req, res){
-	res.send(sif_token);
+	fs.readFile('tmp/upload.txt', 'utf8', function(err, datad){
+		if (err){
+			return console.log(err);
+		}
+		console.log(datad);
+		$.ajax({
+		  method: "POST",
+		  url: "http://sandbox.api.hmhco.com/v1/documents",
+		  data:{'file': datad},
+		  beforeSend: function (request)
+		            {
+		                request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		                request.setRequestHeader("Vnd-HMH-Api-Key", apikey);
+		                request.setRequestHeader("Authorization", sif_token);
+		            },
+		  success: function(response) {
+		  	console.log(response);
+  }
+});
+	})
+	
 })
 
 
