@@ -1,11 +1,20 @@
-var fs = require('fs');
 
-
-$(document).on('click', '#upload', function(e){
+$("#file_form").on('submit', function(e){
 	e.preventDefault();
 	console.log('starting file write');
-	var content = $('#content').val(); 
-	
-	console.log('im done');
+	// $.ajax({
+	//   	method: "POST",
+	//   	url: "",
+	//   	beforeSend: function (request)
+	//             {
+	//                 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	//                 request.setRequestHeader("Vnd-HMH-Api-Key", apikey);
+	//             },
+	//   	success: function(response) {
+	//   	console.log("got an access token: " + response.access_token);
+	//     sif_token = response.access_token;
+
+	//   })
+
 
 });

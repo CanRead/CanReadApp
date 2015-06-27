@@ -1,26 +1,101 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@1.4.23
-3 info using node@v0.10.31
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart CanRead@0.0.0
-6 info start CanRead@0.0.0
-7 verbose unsafe-perm in lifecycle true
-8 info CanRead@0.0.0 Failed to exec start script
-9 error CanRead@0.0.0 start: `node ./bin/www`
-9 error Exit status 8
-10 error Failed at the CanRead@0.0.0 start script.
-10 error This is most likely a problem with the CanRead package,
-10 error not with npm itself.
-10 error Tell the author that this fails on your system:
-10 error     node ./bin/www
-10 error You can get their info via:
-10 error     npm owner ls CanRead
-10 error There is likely additional logging output above.
-11 error System Darwin 14.4.0
-12 error command "node" "/usr/local/bin/npm" "start"
-13 error cwd /Users/noahteshu/Documents/Development/CanReadApp/CanRead
-14 error node -v v0.10.31
-15 error npm -v 1.4.23
-16 error code ELIFECYCLE
-17 verbose exit [ 1, true ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead',
+5 verbose install   [ 'express',
+5 verbose install     'express-helpers',
+5 verbose install     'express-session',
+5 verbose install     'express-partials',
+5 verbose install     'body-parser',
+5 verbose install     'cookie-parser',
+5 verbose install     'morgan',
+5 verbose install     'serve-favicon',
+5 verbose install     'debug',
+5 verbose install     'ejs',
+5 verbose install     'fs' ] ]
+6 info preinstall CanRead@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping express-partials@^0.3.0 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+9 verbose already installed skipping express-session@~1.8.2 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+10 verbose already installed skipping body-parser@~1.8.1 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+11 verbose already installed skipping cookie-parser@~1.3.3 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+12 verbose already installed skipping morgan@~1.3.0 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+13 verbose already installed skipping serve-favicon@~2.1.3 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+14 verbose already installed skipping debug@~2.0.0 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+15 verbose already installed skipping ejs@~0.8.8 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+16 verbose cache add [ 'fs@~0.12.5', null ]
+17 verbose cache add name=undefined spec="fs@~0.12.5" args=["fs@~0.12.5",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'fs@~0.12.5',
+18 verbose parsed url   path: 'fs@~0.12.5',
+18 verbose parsed url   href: 'fs@~0.12.5' }
+19 verbose cache add name="fs" spec="~0.12.5" args=["fs","~0.12.5"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '~0.12.5',
+20 verbose parsed url   path: '~0.12.5',
+20 verbose parsed url   href: '~0.12.5' }
+21 verbose addNamed [ 'fs', '~0.12.5' ]
+22 verbose addNamed [ null, '>=0.12.5-0 <0.13.0-0' ]
+23 verbose already installed skipping express@~4.9.0 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+24 silly lockFile 67786aa5-fs-0-12-5 fs@~0.12.5
+25 verbose lock fs@~0.12.5 /Users/elaine/.npm/67786aa5-fs-0-12-5.lock
+26 verbose already installed skipping express-helpers@1.3.1 /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+27 silly addNameRange { name: 'fs', range: '>=0.12.5-0 <0.13.0-0', hasData: false }
+28 verbose url raw fs
+29 verbose url resolving [ 'https://registry.npmjs.org/', './fs' ]
+30 verbose url resolved https://registry.npmjs.org/fs
+31 info trying registry request attempt 1 at 18:15:19
+32 http GET https://registry.npmjs.org/fs
+33 http 200 https://registry.npmjs.org/fs
+34 silly registry.get cb [ 200,
+34 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+34 silly registry.get     etag: '"3L31VQWPYJLGLUTV9OUYSCJRB"',
+34 silly registry.get     'content-type': 'application/json',
+34 silly registry.get     'cache-control': 'max-age=60',
+34 silly registry.get     'content-length': '1577',
+34 silly registry.get     'accept-ranges': 'bytes',
+34 silly registry.get     date: 'Sat, 27 Jun 2015 22:07:14 GMT',
+34 silly registry.get     via: '1.1 varnish',
+34 silly registry.get     age: '0',
+34 silly registry.get     connection: 'keep-alive',
+34 silly registry.get     'x-served-by': 'cache-jfk1030-JFK',
+34 silly registry.get     'x-cache': 'HIT',
+34 silly registry.get     'x-cache-hits': '1',
+34 silly registry.get     'x-timer': 'S1435442833.692068,VS0,VE338',
+34 silly registry.get     vary: 'Accept' } ]
+35 silly addNameRange number 2 { name: 'fs', range: '>=0.12.5-0 <0.13.0-0', hasData: true }
+36 silly addNameRange versions [ 'fs', [ '0.0.0', '0.0.2' ] ]
+37 silly lockFile 67786aa5-fs-0-12-5 fs@~0.12.5
+38 silly lockFile 67786aa5-fs-0-12-5 fs@~0.12.5
+39 error notarget No compatible version found: fs@'>=0.12.5-0 <0.13.0-0'
+39 error notarget Valid install targets:
+39 error notarget ["0.0.0","0.0.2"]
+39 error notarget
+39 error notarget This is most likely not a problem with npm itself.
+39 error notarget In most cases you or one of your dependencies are requesting
+39 error notarget a package version that doesn't exist.
+40 error System Darwin 12.5.0
+41 error command "node" "/usr/local/bin/npm" "install"
+42 error cwd /Users/elaine/Desktop/HMH_hackathon/CanReadApp/CanRead
+43 error node -v v0.10.24
+44 error npm -v 1.3.21
+45 error code ETARGET
+46 verbose exit [ 1, true ]

@@ -15,13 +15,22 @@
 
 <h1 class='text-center'>Upload What You Would Like To Read</h1>
 
-<form role='form'>
+<form role='form' action='/upload_manual' method='POST' id='upload_manual'>
 	<div class="form-group">
 		<label for="file_content">Content to upload:</label>
-		<textarea class="form-control" rows="5" id="content"></textarea>
+		<textarea class="form-control" rows="5" id="content" name='contentbody'></textarea>
 	</div>
 	<button type="submit" class='btn btn-lg btn-primary' id='upload'>Upload</button>
 </form>
+
+
+<form role='form' action='/upload_manual' method='POST' id='upload_manual'>
+  <div class="form-group">
+    <input type='file' name='file'>
+  </div>
+  <button type="submit" class='btn btn-lg btn-primary' id='upload'>Upload</button>
+</form>
+
 <!--Spritz Reader/detail view below -->
 
 </body>

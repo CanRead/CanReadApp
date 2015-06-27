@@ -20,10 +20,16 @@ router.get('/spritzer', function(req, res){
 })
 
 router.post('/upload_manual', function(req, res){
-	var content = req.params.content; 
-	fs.writeFile('../tmp/upload.txt', content);
-
-
+	console.log(req.body);
+	var content = req.body.contentbody; 
+	console.log('content');
+	console.log(content);
+	fs.writeFile('tmp/upload.txt', content, function(err){
+		if (err){
+			console.log(err);
+		}
+		console.log('the file is saved!');
+	});
 })
 
 router.post('/secret', function(req, res){
@@ -32,7 +38,12 @@ router.post('/secret', function(req, res){
 }); 
 
 router.get('/secret', function(req, res){
-	res.send('success');
-})
+	fs.writeFile('tmp/upload.txt', "hi", function(err){
+		if (err){
+			console.log(err);
+		}
+		console.log('the file is saved!');
+	});
+}); 
 
 module.exports = router;
