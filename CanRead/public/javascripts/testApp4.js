@@ -54,18 +54,15 @@
 		}
 	};
 	
-	function onDocSelected(unit) {
-		console.log(unit);
-		console.log('inside');
-		var name = unit;
-		
+	// Modified to quickly repackage the url so the spritzer can read it
+	function onDocSelected(name) {		
 		// Stop the current spritzing
 		stopSpritzing();
 		
 		if (name === '') {
 			setSpritzText(null);
 		} else {
-			var info = name;
+			var info = {"url" : name};
 			
 			if (typeof(info.text) === "undefined") {
 				console.log("Loading " + info.url + " from API server");
@@ -115,12 +112,11 @@
 		init();
 	});
 
+	// Uploaded text calls spritzer
 	$(document).on('click', '.doc', function(e){
 	  e.preventDefault();
 	  a = $(this);
-	  console.log($(this));
-	  console.log($(this).attr('value'));
 	  var url = $(this).attr('value');
 	  onDocSelected(url);
-	})	
+	});	
 })();
