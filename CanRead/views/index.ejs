@@ -8,6 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
   <title>Can Read</title>
 
 
@@ -50,11 +51,34 @@
           <button class="btn btn-default col-xs-4" id="clear" type="submit">Clear</button>  
           <div class='col-xs-2'></div> 
           <button class="btn btn-primary col-xs-4" id="startSpritz" type="submit">Spritz!</button>
-      </div>
+          <div class='col-xs-1'></div>
       <div class='col-xs-3'></div>
     </div>
   </div>
 </div>
+<div class='row'>
+  <br /><br /><br />
+  <div class='col-xs-3'></div>
+  <div class="spacer-b col-xs-6">
+
+      <input id="autoStartOption" type="checkbox" checked/> Auto-Start
+      <br>
+      <br>
+      
+      <h4>Select text to spritz</h4>
+      <!-- <div id='documents'></div>
+      </div>
+ -->      <div class='row'>
+      <div class='col-xs-5'></div>
+      <!-- <button id='refresh' class='btn btn-lg btn-info col-xs-2 text-center'>Refresh </button> -->
+    </div>
+      <ul class="list-group" id="textList">
+        <li class="list-group-item"><a id="text1">Hello World</a></li>
+        <li class="list-group-item"><a id="text2">Wilbur Wright</a></li>
+      </ul>
+    </div>
+      </div>
+    </div>
   <script type="text/javascript">
     var SpritzSettings = {
       clientId: "6c5714e3604dad3f5",
@@ -65,7 +89,7 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://sdk.spritzinc.com/js/1.2/js/spritz.min.js"></script>
   <script id="js-example-script" type="text/javascript" src="javascripts/testApp7.js"></script>
-
+  <script id="js-example-script" type="text/javascript" src="javascripts/testApp4.js"></script>
 <!-- uploading documents -->
 <br /><br /><br /><br /><br /><br /><br /><br /><br />
 <div id='upload'>
@@ -83,7 +107,7 @@
     <br /><br /><br />
     <div id='documents'></div>
     </div>
-    </div>
+  </div>
     <div class='row'>
       <div class='col-xs-5'></div>
       <button id='refresh' class='btn btn-lg btn-info col-xs-2 text-center'>Refresh </button>
