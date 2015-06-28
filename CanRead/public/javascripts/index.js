@@ -48,6 +48,8 @@ $("#login").on('click', function(e){
 })
 
 $(document).ready(function(){
+  $('.document_read').hide();
+
   var form = document.getElementById('file-form'); 
   var fileSelect = document.getElementById('file-select');
   var uploadButton = document.getElementById('upload-button');
@@ -97,7 +99,7 @@ $(document).on('click', '.doc', function(e){
   a = $(this);
   console.log($(this));
   console.log($(this).attr('value'));
-  $.ajax
+
 })
 
 $(document).on('click', '#refresh', function(e){
@@ -121,4 +123,14 @@ $(document).on('click', '#refresh', function(e){
         })
         }
   });
+})
+
+$(document).on('click', '#document_read', function(){
+  $('.document_read').show();
+  $('.manual_read').hide();
+})
+
+$(document).on('click', '#manual_read', function(){
+  $('.document_read').hide();
+  $('.manual_read').show();
 })
