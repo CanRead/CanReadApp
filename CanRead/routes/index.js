@@ -13,6 +13,10 @@ router.get('/upload', function(req, res){
 	res.render('upload_content', {sif_token_data: sif_token});
 });
 
+router.get('/readinglist', function(req, res){
+	res.render('readinglist', {sif_token_data: sif_token});
+});
+
 router.get('/login_success', function(req, res){
 	res.render('login_sucess');
 })
