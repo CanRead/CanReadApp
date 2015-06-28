@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	$.ajax({
 		  method: "GET",
-		  url: "http://sandbox.api.hmhco.com/v1/documents/4923ccbd-2a4c-454a-aa49-0d12c1b1d93b",
+		  url: "http://sandbox.api.hmhco.com/v1/documents/",
 		  processData: false, 
 		  // data: {id: '4923ccbd-2a4c-454a-aa49-0d12c1b1d93b'},
 		  beforeSend: function (request)

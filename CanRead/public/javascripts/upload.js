@@ -24,15 +24,6 @@ $(document).ready(function(){
 	var uploadButton = document.getElementById('upload-button');
 	var sif_token = $('#sif_token').attr('value');
 	console.log('sif_token', sif_token);
-	// form.onsubmit = function(e){
-	// 	e.preventDefault();
-	// 	uploadButton.innerHTML = 'Uploading...';
-
-	// 	var files = fileSelect.files;
-	// 	var formData = new FormData();
-	// 	formData.append('file', files);
-
-	// }
 
 	$('#upload-button').click(function(e){
 		e.preventDefault();

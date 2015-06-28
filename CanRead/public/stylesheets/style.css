@@ -17,7 +17,15 @@ div.spritzer-header {
 	display: none;
 }
 
-#spritzPage {
+#spritzPage, #upload{
 	display: none;
 }
 
+
+#inputText{
+	width:100%;
+}
+
+.spritzer-container{
+	width:100%;
+}
