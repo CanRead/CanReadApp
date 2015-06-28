@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/upload', function(req, res){
-	res.render('upload_content');
+	res.render('upload_content', {sif_token_data: sif_token});
 });
 
 router.get('/login_success', function(req, res){
@@ -31,10 +31,14 @@ router.post('/upload_manual', function(req, res){
 		}
 		console.log('the file is saved!');
 	});
+	res.redirect('/');
 })
 
 router.post('/secret', function(req, res){
-	sif_token = req.params.sif_token; 
+	sif_token = req.body.sif_token; 
+	console.log('hi there');
+	console.log(req.body.sif_token);
+	console.log(req.params.sif_token);
 	res.send(sif_token);
 }); 
 
@@ -44,23 +48,12 @@ router.get('/secret', function(req, res){
 			return console.log(err);
 		}
 		console.log(datad);
-		$.ajax({
-		  method: "POST",
-		  url: "http://sandbox.api.hmhco.com/v1/documents",
-		  data:{'file': datad},
-		  beforeSend: function (request)
-		            {
-		                request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		                request.setRequestHeader("Vnd-HMH-Api-Key", apikey);
-		                request.setRequestHeader("Authorization", sif_token);
-		            },
-		  success: function(response) {
-		  	console.log(response);
-  }
-});
+		
 	})
 	
 })
 
-
+router.get('/test', function(req, res){
+	res.send(sif_token);
+})
 module.exports = router;

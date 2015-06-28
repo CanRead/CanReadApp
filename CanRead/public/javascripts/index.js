@@ -22,7 +22,7 @@ $("#login").on('click', function(e){
     $.ajax({
   method: "POST", 
   url: '/secret',
-  sif_token: sif_token
+  data: {'sif_token':sif_token}
   });
     $("#loginPage").hide();
     $("#spritzPage").show();
