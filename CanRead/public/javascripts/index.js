@@ -129,10 +129,12 @@ $(document).on('click', '#refresh', function(e){
 $(document).on('click', '#document_read', function(){
   $('.document_read').show();
   $('.manual_read').hide();
+  location.href = "#refresh";
 })
 
 $(document).on('click', '#manual_read', function(){
   $('.manual_read').show();
   $('.document_read').hide();
+  location.href = '#bottom';
   
 })
