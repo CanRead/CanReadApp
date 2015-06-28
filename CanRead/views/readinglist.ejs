@@ -8,19 +8,86 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-  <script src='/javascripts/readinglist.js'></script>
   <title>Can Read</title>
+
+
 </head>
 <body>
 
-<h1 class='text-center'>Your Reading List</h1>
-<div id='load'></div>
+<h1 class='text-center'>CanRead</h1>
 
-
-
-<div id='sif_token' style="display:none" value='<%=sif_token_data%>' > <%=sif_token_data%></div>
+<div class="page" id="loginPage">
+ <form role='form'>
+ 	<div class='form-group'>
+ 		<div class='row'>
+ 			<div class='col-xs-3'></div>
+ 			<div class='col-xs-6'>
+		 		<input type="text" class='form-control' placeholder="Username" id="username">
+		 		<input type="password" class='form-control' placeholder="Password" id="password">	
+        <br /><br />
+		 		<button type="submit" class='btn btn-lg btn-primary col-xs-12' id="login">Log In</button>
+		 	</div> 	
+	 	</div>
+	 </div>
+ </form>
+</div>
 
 <!--Spritz Reader/detail view below -->
+<div class="page" id="spritzPage">
+  <div class='row'>
+    <div id="sprtiz_wrapper" class='col-xs-12 text-center'>
+      <div id="spritzer" ></div>
+      <br /><br /><br /><br /><br />
+      <div class='col-xs-3'></div>
+      <div class='col-xs-6 text-center'>
+		<div class="spacer-b">
+			<input id="autoStartOption" type="checkbox" checked/> Auto-Start
+			<br>
+			<br>
+			
+			<h4>Select text to spritz</h4>
+			<ul id="textList">
+				<li><a id="text1">Hello World</a></li>
+				<li><a id="text2">Wilbur Wright</a></li>
+			</ul>
+		</div>
+      </div>
+      <div class='col-xs-3'></div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript">
+    var SpritzSettings = {
+      clientId: "6c5714e3604dad3f5",
+      redirectUri: "login_success.html",
+      
+    };
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://sdk.spritzinc.com/js/1.2/js/spritz.min.js"></script>
+  <script id="js-example-script" type="text/javascript" src="javascripts/testApp4.js"></script>
 
+<!-- uploading documents -->
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div id='upload' class='row'>
+<div class='text-center'>
+  <h1 >Upload What You Would Like To Read</h1>
+
+  <div class='col-xs-4'></div>
+  <form role='form' action='/upload_manual' method='POST' id='file-form'>
+    <div class="form-group col-xs-8">
+      <input type='file' name='file' id='file-select'>
+    </div>
+    <button type="submit" class='btn btn-lg btn-primary' id='upload-button'>Upload</button>
+  </form>
+  <br /><br /><br />
+  <div id='documents'></div>
+  </div>
+</div>
+
+<!-- this example's JS -->
+
+
+<script src="/javascripts/index.js"></script>
 </body>
 </html>

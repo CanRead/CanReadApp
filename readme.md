@@ -11,7 +11,7 @@ Want to try CanRead?  See the [CanRead project site](http://canread.github.io).
 
 # How CanRead Was Created
 
-CanRead was created at the [Houghton Mifflin Harcourt Creative Codefest](http://curiouscodefest.hmhco.com/), a hackathon that took place in Boston, MA on June 26-27, 2015.  
+CanRead was created at the [Houghton Mifflin Harcourt Creative Codefest](http://curiouscodefest.hmhco.com/), a hackathon that took place in Boston, MA on June 26 and 27, 2015.  
 
 # Team 
 
