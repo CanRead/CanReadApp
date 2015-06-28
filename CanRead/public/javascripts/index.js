@@ -48,13 +48,15 @@ $("#login").on('click', function(e){
 })
 
 $(document).ready(function(){
-  $('.document_read').hide();
+  $('.spritzer-container').first().addClass('manual_read');
+  $('.spritzer-container:nth-child(2)').addClass('document_read');
 
   var form = document.getElementById('file-form'); 
   var fileSelect = document.getElementById('file-select');
   var uploadButton = document.getElementById('upload-button');
   // var sif_token = $('#sif_token').attr('value');
   // console.log('sif_token', sif_token);
+  $('.document_read').hide();
 
   //for uploading documents
   $('#upload-button').click(function(e){
@@ -86,7 +88,6 @@ $(document).ready(function(){
           console.log(response.secure_token);
           uploadButton.innerHTML = 'Upload';
           var tokenup = response.secure_token;
-          
 
           }
     });
@@ -131,6 +132,7 @@ $(document).on('click', '#document_read', function(){
 })
 
 $(document).on('click', '#manual_read', function(){
-  $('.document_read').hide();
   $('.manual_read').show();
+  $('.document_read').hide();
+  
 })
