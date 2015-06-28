@@ -56,6 +56,7 @@
 	
 	function onDocSelected(unit) {
 		console.log(unit);
+		console.log('inside');
 		var name = unit;
 		
 		// Stop the current spritzing
@@ -113,4 +114,13 @@
 	$(document).ready(function() {
 		init();
 	});
+
+	$(document).on('click', '.doc', function(e){
+	  e.preventDefault();
+	  a = $(this);
+	  console.log($(this));
+	  console.log($(this).attr('value'));
+	  var url = $(this).attr('value');
+	  onDocSelected(url);
+	})	
 })();
