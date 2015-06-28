@@ -16,24 +16,8 @@
 
 <h1 class='text-center'>CanRead</h1>
 
-<div class="page" id="loginPage">
- <form role='form'>
- 	<div class='form-group'>
- 		<div class='row'>
- 			<div class='col-xs-3'></div>
- 			<div class='col-xs-6'>
-		 		<input type="text" class='form-control' placeholder="Username" id="username">
-		 		<input type="password" class='form-control' placeholder="Password" id="password">	
-        <br /><br />
-		 		<button type="submit" class='btn btn-lg btn-primary col-xs-12' id="login">Log In</button>
-		 	</div> 	
-	 	</div>
-	 </div>
- </form>
-</div>
-
 <!--Spritz Reader/detail view below -->
-<div class="page" id="spritzPage">
+<div class="page">
   <div class='row'>
     <div id="sprtiz_wrapper" class='col-xs-12 text-center'>
       <div id="spritzer" ></div>
@@ -46,8 +30,8 @@
 			<br>
 			
 			<h4>Select text to spritz</h4>
-			<ul id="textList">
-				<li><a id="text1">Hello World</a></li>
+			<ul class="list-group" id="textList">
+				<li class="list-group-item"><a id="text1">Hello World</a></li>
 				<li><a id="text2">Wilbur Wright</a></li>
 			</ul>
 		</div>
@@ -69,7 +53,7 @@
 
 <!-- uploading documents -->
 <br /><br /><br /><br /><br /><br /><br /><br /><br />
-<div id='upload' class='row'>
+<div class='row'>
 <div class='text-center'>
   <h1 >Upload What You Would Like To Read</h1>
 
