@@ -118,6 +118,7 @@
 	  a = $(this);
 	  var url = $(this).attr('value');
 	  onDocSelected(url);
+	  // Go to the top
 	  $(window).scrollTop(0);
 	});	
 })();

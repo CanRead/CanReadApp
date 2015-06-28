@@ -27,6 +27,9 @@
 		
 		// Send to SpritzEngine to translate
 		SpritzClient.spritzify(text, locale, onSpritzifySuccess, onSpritzifyError);
+		
+		// Go to the top
+		$(window).scrollTop(0);
 	};
 	
 	
