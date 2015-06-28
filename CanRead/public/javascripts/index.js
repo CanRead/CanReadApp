@@ -3,7 +3,7 @@ var sif_token;
 
 $("#login").on('click', function(e){
 	e.preventDefault();
-	console.log("thats a login");	
+	// console.log("thats a login");	
 	var username = $("#username").val();
 	var password = $("#password").val();
 	
@@ -17,7 +17,7 @@ $("#login").on('click', function(e){
                   request.setRequestHeader("Vnd-HMH-Api-Key", apikey);
               },
     success: function(response) {
-    	console.log("got an access token: " + response.access_token);
+    	// console.log("got an access token: " + response.access_token);
       sif_token = response.access_token;
       
       $("#loginPage").hide();
@@ -35,13 +35,9 @@ $("#login").on('click', function(e){
                     request.setRequestHeader("Authorization", sif_token);
                 },
       success: function(response) {
-        console.log('done downloading');
-        console.log(response);
 
         $('#documents').append("<h1>Your Current Documents</h1>");
         jQuery.each(response, function(){
-          console.log(this.original_filename);
-          console.log(this.file.url);
            $('#documents').append("<a href='#' class='doc' value='"+this.file.url+"'><h3>"+this.original_filename+"</h3></a>");
         })
         }
@@ -58,9 +54,6 @@ $(document).ready(function(){
   // var sif_token = $('#sif_token').attr('value');
   // console.log('sif_token', sif_token);
 
-
-
-
   //for uploading documents
   $('#upload-button').click(function(e){
     e.preventDefault();
@@ -68,12 +61,12 @@ $(document).ready(function(){
     uploadButton.innerHTML = 'Uploading...';
 
     var files = fileSelect.files[0];
-    console.log(files);
-    console.log('hi there');
-    console.log(fileSelect.files);
+    // console.log(files);
+    // console.log('hi there');
+    // console.log(fileSelect.files);
     var formData = new FormData();
     formData.append('file', files);
-    console.log(formData);
+    // console.log(formData);
     $.ajax({
         method: "POST",
         url: "http://sandbox.api.hmhco.com/v1/documents",
@@ -87,8 +80,12 @@ $(document).ready(function(){
                   },
         success: function(response) {
           console.log(response);
+          console.log('here in first response');
           console.log(response.secure_token);
           uploadButton.innerHTML = 'Upload';
+          var tokenup = response.secure_token;
+          
+
           }
     });
   });
@@ -101,4 +98,29 @@ $(document).on('click', '.doc', function(e){
   console.log($(this));
   console.log($(this).attr('value'));
   $.ajax
+})
+
+$(document).on('click', '#refresh', function(e){
+  $('#documents').empty();
+  // $.ajax({
+  //           method: "GET",
+  //           url: "http://sandbox.api.hmhco.com/v1/documents/"+tokenup,
+  //           processData: false, 
+  //           // data: {id: '4923ccbd-2a4c-454a-aa49-0d12c1b1d93b'},
+  //           beforeSend: function (request)
+  //                     {
+  //                         request.setRequestHeader("Vnd-HMH-Api-Key", apikey);
+  //                         request.setRequestHeader("Authorization", sif_token);
+  //                     },
+  //           success: function(res) {
+  //             console.log('this is the individual item');
+  //             console.log(res);
+  //             // jQuery.each(response, function(){
+  //               console.log(res.original_filename);
+  //               console.log(res.file.url);
+  //               console.log(res.file);
+  //                $('#documents').append("<a href='#' class='doc' id='"+res.file.url+"'><h3>"+res.original_filename+"</h3></a>");
+  //             // })
+  //             }
+  //       });
 })
