@@ -53,6 +53,35 @@
 			}
 		}
 	};
+	
+	function onDocSelected(unit) {
+		console.log(unit);
+		var name = unit;
+		
+		// Stop the current spritzing
+		stopSpritzing();
+		
+		if (name === '') {
+			setSpritzText(null);
+		} else {
+			var info = name;
+			
+			if (typeof(info.text) === "undefined") {
+				console.log("Loading " + info.url + " from API server");
+				currentTextInfo = info;
+				SpritzClient.fetchContents(info.url, onFetchSuccessController, onFetchError);
+			} else {
+				console.log("Loaded " + info.url + " from cache");
+				info.text.reset();	// Reset the current position
+				
+				if (isAutoStartEnabled()) {
+					startSpritzing(info.text);
+				} else {
+					setSpritzText(info.text);
+				}
+			}
+		}
+	};
 
 	function setSpritzText(spritzText) {
 		// Pull the SpritzerController from this spritzer element and call setSpritzText
