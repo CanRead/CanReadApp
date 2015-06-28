@@ -101,26 +101,24 @@ $(document).on('click', '.doc', function(e){
 })
 
 $(document).on('click', '#refresh', function(e){
+  e.preventDefault();
   $('#documents').empty();
-  // $.ajax({
-  //           method: "GET",
-  //           url: "http://sandbox.api.hmhco.com/v1/documents/"+tokenup,
-  //           processData: false, 
-  //           // data: {id: '4923ccbd-2a4c-454a-aa49-0d12c1b1d93b'},
-  //           beforeSend: function (request)
-  //                     {
-  //                         request.setRequestHeader("Vnd-HMH-Api-Key", apikey);
-  //                         request.setRequestHeader("Authorization", sif_token);
-  //                     },
-  //           success: function(res) {
-  //             console.log('this is the individual item');
-  //             console.log(res);
-  //             // jQuery.each(response, function(){
-  //               console.log(res.original_filename);
-  //               console.log(res.file.url);
-  //               console.log(res.file);
-  //                $('#documents').append("<a href='#' class='doc' id='"+res.file.url+"'><h3>"+res.original_filename+"</h3></a>");
-  //             // })
-  //             }
-  //       });
+  $.ajax({
+      method: "GET",
+      url: "http://sandbox.api.hmhco.com/v1/documents/",
+      processData: false, 
+      // data: {id: '4923ccbd-2a4c-454a-aa49-0d12c1b1d93b'},
+      beforeSend: function (request)
+                {
+                    request.setRequestHeader("Vnd-HMH-Api-Key", apikey);
+                    request.setRequestHeader("Authorization", sif_token);
+                },
+      success: function(response) {
+
+        $('#documents').append("<h1>Your Current Documents</h1>");
+        jQuery.each(response, function(){
+           $('#documents').append("<a href='#' class='doc' value='"+this.file.url+"'><h3>"+this.original_filename+"</h3></a>");
+        })
+        }
+  });
 })
